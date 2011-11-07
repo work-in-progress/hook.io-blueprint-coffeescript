@@ -1,0 +1,81 @@
+{
+  "author": "Martin Wawrusch <martin@wawrusch.com> (http://martinatsunset.com)",
+  "name": "hook.io-blueprint-coffeescript",
+  "description": "A blueprint for your own hook.io hooks using Coffeescript and Vows",
+  "version": "0.0.1",
+  "main" : "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/scottyapp/hook.io-blueprint-coffeescript.git"
+  },
+  "bin" : {
+    "hookio-blueprint-coffeescript" : "./bin/hookio-blueprint-coffeescript"
+  },
+  "directories" : {
+    "lib" : "./lib",
+    "test" : "./spec"
+  },
+  "keywords" : [
+    "hook.io","scaffold","blueprint-coffeescript","blueprint"
+  ],
+  "scripts": {
+    "test": "node_modules/.bin/vows --spec spec/*-spec.coffee",
+    "watch" : "coffee -c -w  -o lib src"
+  },
+  "engines": {
+    "node": ">=0.4.11"
+  },
+  "dependencies": {
+    "colors" : "~ 0.5",
+    "hook.io" : "~ 0.7.7",
+    "pkginfo" : "~ 0.2"    
+  },
+  "devDependencies": {
+    "underscore" : "1.2.x",
+    "async" : "0.1.x",
+    "should" : ">=0.2.1",
+    "coffee-script" : ">= 1.1.2",         
+    "vows" : ">= 0.5.9",
+    "nock" : "*"
+  },
+  "bugs": { "url": "http://github.com/scottyapp/hook.io-blueprint-coffeescript/issues" },
+  "licenses": [
+    { "type": "MIT",
+      "url": "http://github.com/scottyapp/hook.io-blueprint-coffeescript/raw/master/LICENSE"
+    }
+  ],
+  "hook" : {
+    "type" : "BlueprintCoffeescript",
+    "description" : "A blueprint for your own hook.io hooks using Coffeescript and Vows",
+    "images" : [
+        { 
+          "size" : "29x29",
+          "url" : "http://github.com/scottyapp/hook.io-blueprint-coffeescript/raw/master/assets/blueprint-coffeescript29x29.png"
+        },
+        { 
+          "size" : "57x57",
+          "url" : "http://github.com/scottyapp/hook.io-blueprint-coffeescript/raw/master/assets/blueprint-coffeescript57x57.png"
+        },
+        { 
+          "size" : "114x114",
+          "url" : "http://github.com/scottyapp/hook.io-blueprint-coffeescript/raw/master/assets/blueprint-coffeescript114x114.png"
+        }
+        
+      ],
+    
+    "in" : [{
+        "name" : "blueprint-coffeescript::foo",
+        "signatures" : []
+      }
+    ],
+    
+    "out" : [{
+        "name" : "blueprint-coffeescript::error",
+        "signatures" : []
+      },{
+        "name" : "blueprint-coffeescript::bar",
+        "signatures" : []
+      }
+    ]
+  }
+}

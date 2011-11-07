@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+var BlueprintCoffeescript = require('../lib/index').BlueprintCoffeescript;
+
+var hook = new BlueprintCoffeescript({
+  name: 'blueprint-coffeescript'
+});
+
+hook.start();
