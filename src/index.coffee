@@ -7,16 +7,14 @@ require('pkginfo')(module,'version','hook')
 
 class exports.BlueprintCoffeescript extends Hook
   constructor: (options) ->  
-    self = @
-    Hook.call self, options
+    Hook.call @, options
+
+    @on "blueprint-coffeescript::foo", (data) =>
+      @_foo(data)
   
-    self.on "hook::ready", ->  
-  
-      self.on "blueprint-coffeescript::foo", (data)->
-        self._foo(data)
-      
-      for message in (self.messages || [])
-        self.emit "blueprint-coffeescript::foo",
+    @.on "hook::ready", =>
+      for message in (@messages || [])
+        @emit "blueprint-coffeescript::foo",
           messagetext : message.messagetext # Obviously we could just pass message, just illustrating a point here
 
 

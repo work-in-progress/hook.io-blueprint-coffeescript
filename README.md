@@ -65,6 +65,10 @@ Listened to lots of Rage Against the Machine while writing this. Feeling very ol
 
 ## Release Notes
 
+### 0.0.2
+
+* Fixed placement of .on
+* Improved usage of Coffeescript
 
 ### 0.0.1
 
@@ -77,7 +81,7 @@ Listened to lots of Rage Against the Machine while writing this. Feeling very ol
 # Publish new version
 
 * Change version in package.json
-* git tag -a v0.0.q -m 'version 0.0.1'
+* git tag -a v0.0.2 -m 'version 0.0.2'
 * git push --tags
 * npm publish
 
